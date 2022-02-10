@@ -1,0 +1,19 @@
+<div class="col">
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="text-decoration-none">
+        <div class="card">
+        <img src="{{ partial "helpers/get-hero.html" . }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            <p class="card-text text-black">{{ .Summary }}</p>
+        </div>
+        <div class="card-footer">
+            <span class="float-left">{{ if .Lastmod }}
+                {{ partial "helpers/lastmod.html" . }}
+            {{ else }}
+                {{ partial "helpers/date.html" . }}
+            {{ end }}</span>
+            <a href="{{ .RelPermalink }}" title="{{ i18n "read" }}" class="float-right btn btn-outline-info btn-sm">{{ i18n "read" }}</a>
+          </div>
+        </div>
+    </a>
+</div>

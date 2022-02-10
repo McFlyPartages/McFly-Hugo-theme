@@ -1,0 +1,15 @@
+<div class="row align-items-center p-0 m-0">
+  <div class="col text-center align-self-center p-2">
+    <ul class="list-inline">
+      {{ range .Site.Menus.social }}
+      <li class="list-inline-item">
+        {{ if eq .Name "Email" }}
+        <a href="mailto:{{ .URL }}" title="{{ .URL }}">{{ .Pre }}</a>
+        {{ else }}
+        <a href="{{ .URL }}" title="{{ .URL }}">{{ .Pre }}</a>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

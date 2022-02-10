@@ -1,0 +1,12 @@
+{{ $nbPost := 3}}
+{{ if .section.nbPost }}
+  {{ $nbPost = .section.nbPost }}
+{{ end }}
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 my-5">
+    {{ range first $nbPost (where site.RegularPages.ByDate.Reverse "Type" "in" "articles" )}}
+      {{ partial "cards/post-recents" . }}
+    {{ end }}
+  </div>
+</div>

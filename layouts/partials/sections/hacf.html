@@ -1,0 +1,47 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row row align-items-center justify-content-between">
+      <div class="col-7 text-center">
+        <h2 class="fs-2 text-secondary">{{ .name }}</h2><p class="fs-4 fst-italic text-primary">{{ .subtitle }}</p>
+        {{ range .summary }}
+        <p>
+          {{ .description | markdownify }}
+        </p>
+        {{ end }}
+        
+        <div class="col text-center">
+          <ul class="list-inline">
+            {{ range .socialLinks }}
+            <li class="list-inline-item">
+              {{ if eq .name "Email" }}
+                <a href="mailto:{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
+              {{ else if eq .name (i18n "phone") }}
+                <a href="tel:{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
+              {{ else }}
+                <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
+              {{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        <!--
+        {{ partial "menus/rs-menu.html" . }}
+        -->
+      </div>
+
+      
+
+
+      <div class="col-4">
+        <img src="{{ .image }}" alt="{{ .image }}" title="Logo HACF">
+      </div>
+
+      <div class="col-12 text-center">
+        {{ range .button }}
+        <a class="btn btn-primary" href="{{ .url }}" role="button">{{ .name }}</a>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</section>

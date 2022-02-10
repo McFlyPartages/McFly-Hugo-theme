@@ -1,0 +1,4 @@
+{{ $date := .Date.Format "02.01.2006" }}
+{{ $mymonths := index $.Site.Data.mois }}
+
+{{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}
