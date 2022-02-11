@@ -4,7 +4,7 @@
         <img src="{{ partial "helpers/get-hero.html" . }}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ .Title }}</h5>
-            <p class="card-text text-black">{{ .Summary }}</p>
+            <p class="card-text text-black">{{ .Description }}</p>
         </div>
         <div class="card-footer">
             <span class="float-left">{{ if .Lastmod }}
