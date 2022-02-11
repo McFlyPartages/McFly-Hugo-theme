@@ -1,15 +1,17 @@
-<div class="row bg-dark align-items-center p-0 m-0">
-  <div class="col text-center align-self-center p-2">
-    <ul class="list-inline">
-      {{ range .Site.Menus.social }}
-      <li class="list-inline-item">
-        {{ if eq .Name "Email" }}
-        <a href="mailto:{{ .URL }}" title="{{ .URL }}">{{ .Pre }}</a>
-        {{ else }}
-        <a href="{{ .URL }}" title="{{ .URL }}">{{ .Pre }}</a>
-        {{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-</div>
+<h5 class="">Nos Médias</h5>
+<br>
+<ul class="list-inline">
+  {{ range .Site.Menus.social }}
+  <li class="list-inline-item">
+    {{ if eq .Name "Email" }}
+    <a href="mailto:{{ .URL }}" target="_blank" rel="noreferrer" alt="{{ .Name }}" title="{{ .URL }}">
+      <i class="bi {{ .Pre }} fa-2x"></i>
+    </a>
+    {{ else }}
+    <a href="{{ .URL }}" target="_blank" rel="noreferrer" alt="{{ .Name }}" title="{{ .URL }}">
+      <i class="bi {{ .Pre }} fa-2x"></i>
+    </a>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>

@@ -58,5 +58,8 @@ Multi liens :
 * [X] Page A-propos
 * [ ] Page Protection des données
 * [ ] Page Liens Affilies
-* [ ] Awesome (submodule)
-* [ ] Developpeur (submodule)
+* [X] Awesome (submodule)
+* [X] Developpeur (submodule)
+* [ ] Mise a jour des Submodules
+* [ ] Template unique page Guide dev et Awesome.
+* [ ] TOC non fonctionnelle.
