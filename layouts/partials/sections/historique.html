@@ -1,27 +1,28 @@
 <section class="bg-light py-5">
-<div class="container">
-  <div class="row justify-content-evenly">
-    <h2 class="text-center text-secondary pb-2">HACF en dates</h2>
-  {{ range .historique }}
-    <div class="col-5 border border-primary rounded m-1">
-      <div class="row align-self-center pt-3 bg-secondary bg-opacity-50">
-        <div class="col-1">
-          <span class="badge rounded-pill bg-primary text-start">{{ .number }}</span>
-        </div>
-        <div class="col-6">
-          <h5 class="text-center">{{ .name }}</h5>
-        </div>
-        <div class="col-5">
-          <p class="text-primary text-end">{{ .date }}</p>
-        </div>
-      </div>
-      <div class="row">
-          <div class="text-center">
-            {{ .description | markdownify }}
+  <div class="container">
+    <h2 class="text-center text-secondary mb-5">{{ .title }}</h2>
+    <div class="main-timeline">
+      {{ range .historique }}
+      <!-- start experience section-->
+      <div class="timeline">
+          <div class="icon"></div>
+          <div class="date-content">
+              <div class="date-outer">
+                  <span class="date">
+                          <span class="month">{{ .mois }}</span>
+                  <span class="year">{{ .year }}</span>
+                  </span>
+              </div>
+          </div>
+          <div class="timeline-content">
+              <h5 class="title">{{ .name }}</h5>
+              <p class="description">
+                {{ .description | markdownify }}
+              </p>
           </div>
       </div>
+      <!-- end experience section-->
+      {{ end }}
     </div>
-  {{ end }}
   </div>
-</div>
 </section>
