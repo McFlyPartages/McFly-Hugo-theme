@@ -9,7 +9,7 @@
 
 {{/* if hero image is not provided, then use the default hero image */}}
 {{ if not $heroImage }}
-  {{ $heroImage := resources.Get "images/article-hacf-vierge.webp"}}
+  {{ $heroImage := resources.Get "article-hacf-vierge.webp"}}
   {{ .Scratch.Set "heroScratch" $heroImage }}
 {{ end }}
 
