@@ -1,24 +1,29 @@
-<section class="py-5 bg-light">
+<section class="bg-light py-5">
   <div class="container">
-    <div class="row align-items-center justify-content-between">
-
-      <div class="col-12 col-lg-5 text-center mb-3">
+    <div class="row row align-items-center justify-content-between ">
+      <div class="col-4 d-none d-lg-block">
         <picture>
-          <source media="(max-width: 990px)" type="image/webp" srcset="/images/sections/dashboard-ha-200px.webp">
-          <source media="(min-width: 991px)" type="image/webp" srcset="/images/sections/dashboard-ha-300px.webp">
-          <img src="/images/sections/dashboard-ha-200px.webp" alt="Tableau de bord Home Assistant" title="Tableau de bord Home Assistant">
-        </picture>
+          <source srcset="{{ .image }}"
+                  media="(min-width: 1400px)">
+          <source srcset="{{ .imageMob }}"
+                  media="(ma-width: 1400px)">
+          <img src="{{ .imageMobpng }}" alt="Dashboard Home Assistant" title="Dashboard Home Assistant" />
+      </picture>
       </div>
 
       <div class="col-12 col-lg-7 text-center">
-        <h2 class="fs-2 text-secondary">{{ .name }}</h2><p class="fs-4 fst-italic text-primary">{{ .subtitle }}</p>
+        <h2 class="fs-2 text-secondary">{{ .name }}</h2>
+        <p class="fs-4 fst-italic text-primary">{{ .subtitle }}</p>
+        <div class="col-12 d-block d-sm-block d-md-block d-lg-none mb-3">
+          <img src="{{ .imageMob }}" alt="Dashboard Home Assistant" title="Dashboard Home Assistant">
+        </div>
         {{ range .summary }}
         <p>
           {{ .description | markdownify }}
         </p>
         {{ end }}
-
-        <div class="col-12 text-center">
+        
+        <div class="col text-center">
           <ul class="list-inline">
             {{ range .socialLinks }}
             <li class="list-inline-item">
@@ -33,9 +38,12 @@
             {{ end }}
           </ul>
         </div>
+        <!--
+        {{ partial "menus/rs-menu.html" . }}
+        -->
       </div>
 
-      <div class="col-12 text-center  order-last">
+      <div class="col-12 text-center">
         {{ range .button }}
         <a class="btn btn-primary" href="{{ .url }}" role="button">{{ .name }}</a>
         {{ end }}
@@ -43,4 +51,4 @@
 
     </div>
   </div>
-</section>
+</div>

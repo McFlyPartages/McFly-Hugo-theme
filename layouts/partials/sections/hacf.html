@@ -1,17 +1,29 @@
 <section class="py-5">
   <div class="container">
     <div class="row align-items-center justify-content-between">
+
       <div class="col-12 col-lg-7 text-center">
         <h2 class="fs-2 text-secondary">{{ .name }}</h2><p class="fs-4 fst-italic text-primary">{{ .subtitle }}</p>
-        <div class="col-12 d-block d-sm-block d-md-block d-lg-none mb-3">
-          <img src="{{ .logo }}" alt="" title="Logo HACF">
-        </div>
+      </div>
+
+      <div class="col-12 col-lg-5 order-first order-lg-2 text-center mb-3">
+        <picture>
+          <source media="(max-width: 990px)" type="image/webp" srcset="/images/hacf/logo-hacf-100px.webp">
+          <source media="(min-width: 991px)" type="image/webp" srcset="/images/hacf/logo-hacf-300px.webp">
+          <img src="/images/hacf/logo-hacf-100px.webp" alt="Logo de HACF la communauté Francophone autour de Home Assistant" title="Logo de HACF la communauté Francophone autour de Home Assistant">
+        </picture>
+      </div>
+
+      <div class="col-12 col-lg-7 order-lg-1">
         {{ range .summary }}
         <p>
           {{ .description | markdownify }}
         </p>
         {{ end }}
-        
+      </div>
+
+
+      <div class="col-12 col-lg-7 text-center order-lg-3">
         <div class="col-12 text-center">
           <ul class="list-inline">
             {{ range .socialLinks }}
@@ -27,21 +39,9 @@
             {{ end }}
           </ul>
         </div>
-
-        <!--
-        {{ partial "menus/rs-menu.html" . }}
-        -->
       </div>
 
-      
-
-
-      <div class="col-4 d-none d-lg-block">
-        <img src="{{ .image }}" alt="Logo de HACF la communauté Francophone autour de Home Assistant" title="Logo de HACF la communauté Francophone autour de Home Assistant">
-      </div>
-
-
-      <div class="col-12 text-center">
+      <div class="col-12 text-center order-lg-last">
         {{ range .button }}
         <a class="btn btn-primary" href="{{ .url }}" role="button">{{ .name }}</a>
         {{ end }}
