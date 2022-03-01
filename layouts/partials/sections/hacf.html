@@ -4,32 +4,15 @@
 
       <div class="col-12 col-lg-7 text-center">
         <h2 class="fs-2 text-secondary">{{ .name }}</h2><p class="fs-4 fst-italic text-primary">{{ .subtitle }}</p>
-      </div>
-
-      <div class="col-12 col-lg-5 order-first order-lg-2 text-center mb-3">
-        <picture>
-          <source media="(max-width: 990px)" type="image/webp" srcset="/images/hacf/logo-hacf-100px.webp">
-          <source media="(min-width: 991px)" type="image/webp" srcset="/images/hacf/logo-hacf-300px.webp">
-          <img src="/images/hacf/logo-hacf-100px.webp" alt="Logo de HACF la communauté Francophone autour de Home Assistant" title="Logo de HACF la communauté Francophone autour de Home Assistant">
-        </picture>
-
-        <img src="/images/hacf/logo-hacf-100px.webp"
-        srcset="/images/hacf/logo-hacf-100px.webp 340w,
-                /images/hacf/logo-hacf-300px.webp 1024w"
-        sizes="(min-width: 991px) 100% , 40%"
-        alt="Logo de HACF la communauté Francophone autour de Home Assistant" title="Logo de HACF la communauté Francophone autour de Home Assistant">
-      </div>
-
-      <div class="col-12 col-lg-7 order-lg-1">
-        {{ range .summary }}
-        <p>
-          {{ .description | markdownify }}
-        </p>
-        {{ end }}
-      </div>
-
-
-      <div class="col-12 col-lg-7 text-center order-lg-3">
+        <div class="m-5">
+          {{ range .summary }}
+          <p>
+            {{ .description | markdownify }}
+          </p>
+          {{ end }}
+        </div>
+  
+  
         <div class="col-12 text-center">
           <ul class="list-inline">
             {{ range .socialLinks }}
@@ -45,12 +28,24 @@
             {{ end }}
           </ul>
         </div>
+  
+        <div class="mb-3">
+          {{ range .button }}
+          <a class="btn btn-primary" href="{{ .url }}" role="button">{{ .name }}</a>
+          {{ end }}
+        </div>
       </div>
 
-      <div class="col-12 text-center order-lg-last">
-        {{ range .button }}
-        <a class="btn btn-primary" href="{{ .url }}" role="button">{{ .name }}</a>
-        {{ end }}
+      <div class="col-12 col-lg-5 order-first order-lg-2 text-center mb-3">
+        <img 
+          src="/images/hacf/logo-hacf-400px.webp"
+          srcset="/images/hacf/logo-hacf-100px.webp 100w,
+                  /images/hacf/logo-hacf-200px.webp 200w,
+                  /images/hacf/logo-hacf-400px.webp 400w"
+          sizes="(max-width: 576px) 100px, (max-width: 992px) 200px, 400px"
+          alt="Logo de HACF la communauté Francophone autour de Home Assistant"
+          title="Logo de HACF la communauté Francophone autour de Home Assistant"
+        />
       </div>
 
     </div>

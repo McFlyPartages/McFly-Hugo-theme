@@ -9,7 +9,7 @@ Basé sur Bootstrap 5 et Font Awesome
 * [X] Workflow : Géneration, transfert vers FTP/SFTP.
 
 ### Optimisation.
-* [] Organiser le theme.
+* [ ] Organiser le theme.
 * [X] link : Render-Link
 * [X] Créé plusieurs tailles  et propose la plus adaptée.
 * [X] Convertit les images en WebP ou jpg (pour safari)
@@ -37,7 +37,7 @@ Basé sur Bootstrap 5 et Font Awesome
 #### Non urgent
 * [ ] theme : Ajouter les options (affichage menu etc [ici](https://github.com/razonyang/hugo-theme-bootstrap/tree/master/layouts/partials/sidebar))
 * [ ] Redimensionner Avatar (automatiquement)
-* [ ] Integrer le resize image sur data/section.
+* [ ] Integrer le resize image sur data/section.(Voir dans Assets https://mertbakir.gitlab.io/hugo/image-processing-in-hugo/)
 
 ### Shortcodes
 #### Commun
