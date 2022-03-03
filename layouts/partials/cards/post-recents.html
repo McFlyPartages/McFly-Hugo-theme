@@ -1,3 +1,4 @@
+<!--
 <div class="col"> 
     <div class="card h-100">
         <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="text-decoration-none">
@@ -13,6 +14,30 @@
                 {{ else }}
                 <p>Publié : {{ partial "helpers/date.html" . }}</p>
                 {{ end }}
+            </span>
+            <a href="{{ .RelPermalink }}" title="Lire" class="float-md-end btn btn-outline-primary btn-sm">Lire</a>
+          </div> 
+    </div>   
+</div>
+-->
+<div class="col"> 
+    <div class="card h-100">
+        <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="text-decoration-none">
+            <img src="{{ partial "helpers/get-hero.html" . }}" class="card-img-top" alt="hero-{{ .Title }}" title="hero-{{ .Title }}">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            <p class="card-text text-secondary">{{ .Description }}</p>
+        </div>
+        <div class="card-footer">
+            <span class="float-start">
+            {{ $date := .Date.Format "2 Jan, 2006" }}
+            {{ $lastmod := .Lastmod.Format "2 Jan, 2006" }}
+            {{ if and (ne $lastmod $date) (gt .Lastmod .Date) }}
+                Mis à jour le {{ partial "helpers/lastmod.html" . }}
+            {{ else }}
+                Publié le {{ partial "helpers/date.html" . }}
+            {{ end }}
             </span>
             <a href="{{ .RelPermalink }}" title="Lire" class="float-md-end btn btn-outline-primary btn-sm">Lire</a>
           </div> 
