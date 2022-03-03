@@ -18,7 +18,6 @@
 {{/* Redimenssionner l'image Hero sauf si elle est en SVG */}}
 {{ if and $heroImage (ne $heroImage.MediaType.SubType "svg") }}
   {{ $heroImage := $heroImage.Resize "148x webp" }}
-
 {{ end }}
 
 {{/*  Il renvoit le lien de l'image  */}}

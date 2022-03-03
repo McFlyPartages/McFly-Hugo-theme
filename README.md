@@ -13,7 +13,7 @@ Basé sur Bootstrap 5 et Font Awesome
 * [X] link : Render-Link
 * [X] Créé plusieurs tailles  et propose la plus adaptée.
 * [X] Convertit les images en WebP ou jpg (pour safari)
-* [ ] Image voir pour redimenssion max de la taille d'origine.
+* [ ] Image voir pour redimenssiomner au max de la taille d'origine et non argrandir.
 * [X] Ajouter site propulsé dans footer
 * [X] Ajouter la modification via GitHub
 * [ ] Ajouter Modification GitHub pour Submodule.
