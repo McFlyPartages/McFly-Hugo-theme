@@ -5,9 +5,6 @@
 {{ $large := $image.Resize "400x webp picture" }}
 {{ $xlarge := $image.Resize "600x webp picture" }}
 
-{{ $smalljpg := $image.Resize "100x jpg picture" }}
-{{ $mediumjpg := $image.Resize "200x jpg picture" }}
-{{ $largejpg := $image.Resize "400x jpg picture" }}
 {{ $xlargejpg := $image.Resize "600x jpg picture" }}
 
 {{ $alt := .PlainText | safeHTML }}
@@ -17,37 +14,18 @@
   {{ $caption = . | safeHTML }}
 {{ end }}
 
-
-
 <div class="row text-center">
-  <!--
-  <figure class="col border border-light text-center p-2">
-    <a href="{{ $image.RelPermalink }}">
-      <picture class="justify-align-center">
-        <source
-        sizes=" (min-width: 576px) 55vw ,(min-width: 768px) 80vw , (min-width: 1200px) 40vw , (min-width: 1400px) 30vw ,80vw"
-        srcset="{{ $small.RelPermalink }} 320w, {{ $medium.RelPermalink }} 450w, {{ $large.RelPermalink }} 600w, {{ $xlarge.RelPermalink }} 750w" type="image/webp">
-        <img src="{{ $smalljpg.RelPermalink }}, {{ $mediumjpg.RelPermalink }}, {{ $largejpg.RelPermalink }}, {{ $xlargejpg.RelPermalink }}" type="image/jpg" 
-        alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}" {{ with .Title}} title="{{ . }}"{{ end }} style="max-width: 700px; max-height: 300px;">
-      </picture>
-    </a>
-    {{ with $caption }}
-      <figcaption class="text-center">{{ . | markdownify }}</figcaption>
-    {{ end }}
-  </figure>-->
-
   <img 
-  src="{{ $xlargejpg.RelPermalink }}"
-  srcset="{{ $small.RelPermalink }} 100w,
-          {{ $medium.RelPermalink }} 200w,
-          {{ $large.RelPermalink }} 400w,
-          {{ $xlargejpg.RelPermalink }} 600w"
-  type="image/webp"
-  sizes="(max-width: 576px) 100px, (max-width: 768px) 200px, (max-width: 992px) 300px, (max-width: 1200px) 400px, 600px"
-  alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
-  {{ with .Title}} 
-    title="{{ . }}"
-  {{ end }}
-/>
-
+    src="{{ $xlargejpg.RelPermalink }}"
+    srcset="{{ $small.RelPermalink }} 100w,
+            {{ $medium.RelPermalink }} 200w,
+            {{ $large.RelPermalink }} 400w,
+            {{ $xlargejpg.RelPermalink }} 600w"
+    type="image/webp"
+    sizes="(max-width: 576px) 100px, (max-width: 768px) 200px, (max-width: 992px) 300px, (max-width: 1200px) 400px, 600px"
+    alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
+    {{ with .Title}} 
+      title="{{ . }}"
+    {{ end }}
+  />
 </div>

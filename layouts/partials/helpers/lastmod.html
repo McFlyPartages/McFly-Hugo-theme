@@ -1,4 +1,0 @@
-{{ $lastmod := .Lastmod.Format "02.01.2006" }}
-{{ $mymonths := index $.Site.Data.mois }}
-
-{{ .Lastmod.Day }} {{ index $mymonths (printf "%d" .Lastmod.Month) }} {{ .Lastmod.Year }}

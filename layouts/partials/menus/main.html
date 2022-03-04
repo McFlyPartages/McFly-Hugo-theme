@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a href="{{ .Site.BaseURL }}" class="d-flex align-items-center text-dark text-decoration-none">
+        <img src="{{ .Site.Params.logo }}" width="30" height="30" class="d-inline-block align-top" alt="{{ .Site.Title }}-logo" title="{{ .Site.Title }}-logo">
+        <span class="fs-4 m-1">{{ .Site.Title }}</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menusMain" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="menusMain">
+        <ul class="navbar-nav">
+          {{ range .Site.Menus.main }}
+            {{ if .HasChildren }} {{ $id := print "navbarDropdownMenuLink" .Identifier }}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-black" href="#" id="{{ $id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ .Name }}
+              </a>
+              <ul class="dropdown-menu bg-light" aria-labelledby="{{ $id }}">
+                {{ range .Children }}
+                <li>
+                  <a class="dropdown-item text-black" href="{{ .URL }}" {{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Name }}</a>
+                </li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ else }}
+            <li class="nav-item">
+              <a class="nav-link text-black" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </nav>
