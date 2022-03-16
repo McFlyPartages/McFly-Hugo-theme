@@ -17,10 +17,10 @@
 <div class="row text-center">
   <img 
     src="{{ $xlargejpg.RelPermalink }}"
-    srcset="{{ $small.RelPermalink }} 100w,
-            {{ $medium.RelPermalink }} 200w,
-            {{ $large.RelPermalink }} 400w,
-            {{ $xlargejpg.RelPermalink }} 600w"
+    srcset="{{ $small.RelPermalink }} 100px,
+            {{ $medium.RelPermalink }} 200px,
+            {{ $large.RelPermalink }} 400px,
+            {{ $xlargejpg.RelPermalink }} 100px"
     type="image/webp"
     sizes="(max-width: 576px) 100px, (max-width: 768px) 200px, (max-width: 992px) 300px, (max-width: 1200px) 400px, 600px"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
