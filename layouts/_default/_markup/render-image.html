@@ -7,7 +7,7 @@
   {{ $xlarge := $image.Resize "600x webp picture" }}
 
   {{ $xlargejpg := $image.Resize "600x jpg picture" }}
-{{ end }}
+
 
 {{ $alt := .PlainText | safeHTML }}
 
@@ -31,3 +31,24 @@
     {{ end }}
   />
 </div>
+{{ else }}
+
+
+
+{{ $alt := .PlainText | safeHTML }}
+
+{{ $caption := "" }}
+{{ with .Title }}
+  {{ $caption = . | safeHTML }}
+{{ end }}
+
+<div class="row text-center">
+  <img 
+    src="{{ $image.RelPermalink }}"
+    alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
+    {{ with .Title}} 
+      title="{{ . }}"
+    {{ end }}
+  />
+</div>
+{{ end }}
