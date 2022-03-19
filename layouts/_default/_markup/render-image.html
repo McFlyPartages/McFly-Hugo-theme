@@ -1,11 +1,13 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 
-{{ $small := $image.Resize "100x webp picture" }}
-{{ $medium := $image.Resize "200x webp picture" }}
-{{ $large := $image.Resize "400x webp picture" }}
-{{ $xlarge := $image.Resize "600x webp picture" }}
+{{ if and $image (ne $image.MediaType.SubType "svg") }}
+  {{ $small := $image.Resize "100x webp picture" }}
+  {{ $medium := $image.Resize "200x webp picture" }}
+  {{ $large := $image.Resize "400x webp picture" }}
+  {{ $xlarge := $image.Resize "600x webp picture" }}
 
-{{ $xlargejpg := $image.Resize "600x jpg picture" }}
+  {{ $xlargejpg := $image.Resize "600x jpg picture" }}
+{{ end }}
 
 {{ $alt := .PlainText | safeHTML }}
 
