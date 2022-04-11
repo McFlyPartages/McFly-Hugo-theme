@@ -9,6 +9,15 @@ type: # Types existant : pages; news; awesome; guidedev;etc. Laisser vide pour l
 description: "blablabla desciption" # Description du sujet.
 # hero: /path/image.ext # Recherche un fichier hero.(webp;jpg;png;svg) a la racine du dossier OU si un hero est defini ici SINON il prend un hero par defaut.
 
+# Simple ou multi auteurs, il faut remplir l'auteur principal.
+author: auteur principal
+
+# Recherche par auteurs et si multi auteurs.
+authors:
+  - auteur un
+  - auteur deux
+  - etc
+
 
 socialshare: true # Active l'option de partage
 article_ha: true # Ajoute les boutton du forum et les medias des deux communautés Home Assistant (Off et HACF)

@@ -17,13 +17,7 @@
           <ul class="list-inline">
             {{ range .socialLinks }}
             <li class="list-inline-item">
-              {{ if eq .name "Email" }}
-                <a href="mailto:{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
-              {{ else if eq .name (i18n "phone") }}
-                <a href="tel:{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
-              {{ else }}
                 <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
-              {{ end }}
             </li>
             {{ end }}
           </ul>

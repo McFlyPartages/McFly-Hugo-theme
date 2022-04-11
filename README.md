@@ -77,4 +77,10 @@ Multi liens :
 * [X] Shortcode user HACF et HACF `{{< userha "user" haoff >}}` option `hacf` ou `haoff`.
 
 
-Modif essai
+A VOIR
+
+##https://forestry.io/blog/how-to-use-hugo-s-image-processing-with-forestry/
+##https://alexlakatos.com/web/2020/07/17/hugo-image-processing/
+https://adityatelange.in/blog/hugo-watermarking-images/
+https://gist.github.com/HenrySkup/fa8abe26ac387f139f04f256cf28629e
+https://gist.github.com/adityatelange/376cd56ee2c94aaa2e8b93200f2ba8b5
