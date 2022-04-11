@@ -5,26 +5,28 @@ Basé sur Bootstrap 5 et Font Awesome
 
 ### Gestion.
 * [X] Bootstrap local
+* [ ] Réduire le CSS Bootstrap ou le packager.
 * [ ] Font Awesome local (via CDN pour le moment)
 * [X] Workflow : Géneration, transfert vers FTP/SFTP.
-* [ ] Multi Author (https://codingnconcepts.com/hugo/multiple-authors-hugo/)
+* [X] Multi Author (https://codingnconcepts.com/hugo/multiple-authors-hugo/)
 
 ### Optimisation.
 * [ ] Organiser le theme.
+* [ ] Travailler sur les branch de Github.
 * [X] Titre : Ancrage pour sommaire (https://gohugo.io/getting-started/configuration-markup)
-* [X] link : Render-Link
+* [X] link : Render Hook Link https://gohugo.io/templates/render-hooks/
+* [ ] Code : Mise en forme via Render Hooks https://gohugo.io/templates/render-hooks/#render-hooks-for-code-blocks
 * [X] Créé plusieurs tailles  et propose la plus adaptée.
-* [X] Convertit les images en WebP ou jpg (pour safari)
+* [X] Convertir les images en WebP
 * [ ] Image voir pour redimenssiomner au max de la taille d'origine et non argrandir.(https://laurakalbag.com/processing-responsive-images-with-hugo/; https://www.cgfootman.com/2020/06/06/add-responsive-images-to-a-hugo-site/ ; https://www.scien.cx/2018/12/13/processing-responsive-images-with-hugo/) https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015
 * [X] Ajouter site propulsé dans footer
 * [X] Ajouter la modification via GitHub
 * [X] Ajouter Modification GitHub pour Submodule.
 * [X] Categories : hauteur constante (`classe="h-100"` ATTENTION non dispo pour `<a>`)
-* [X] single: Page Article afficher HeroImg du Front Matter AMELIORATION : Voir pour crop l'image ou adapter avec une autre image
+* [X] single: Page Article : Afficher HeroImg du Front Matter ou image par defaut AMELIORATION : Voir pour crop l'image ou adapter avec une autre image
 * [ ] single : Ajouter les [articles en relation](https://bout2code.fr/tutos/creer-un-site-avec-hugo/comment-creer-un-site-avec-hugo-partie-7-ajouter-du-contenu-en-relation/)
 * [X] list : Afficher HeroImg du Front Matter
 * [ ] serie : Ajouter template Séries https://onebite.dev/series-of-article-in-hugo-website/
-
 * [X] TOC
 * [X] Correction Date et Mise a jour.
 ```
@@ -39,8 +41,8 @@ Basé sur Bootstrap 5 et Font Awesome
   
 #### Confidentialité
 * [X] link : Ajouter target_blank dans partial RS rel="noreferrer"
-* [ ] Vérifier les cookies.Aucun pour le moment
-* [ ] Analyse via [Matomo](https://fr.matomo.org/) presentation [ici](https://zestedesavoir.com/tutoriels/2508/matomo-analytics/)
+* [ ] Vérifier les cookies. Aucun pour le moment
+* [ ] Analyse via [Matomo](https://fr.matomo.org/) présentation [ici](https://zestedesavoir.com/tutoriels/2508/matomo-analytics/)
 
 
 #### SEO
@@ -58,9 +60,10 @@ Basé sur Bootstrap 5 et Font Awesome
 ### Shortcodes
 #### Commun
 * [X] Images : Ajouter shortcodes Gallery + image processing `{{< gallery folder="infos" >}}` infos=le nom du dossier contenant les images
-* [X] single : Shortcode Alerte. `{{< alert "Message **succees**" success >}}` danger/sucess/warning/info.
+* [X] single : Shortcode Alerte. `{{< alert "Message **d'alerte**" success >}}` options possibles : danger/sucess/warning/info.
 * [X] single : Shortcode de citation `{{< quote "Message **citation**" "artiste **anonyme**" "align" >}}` align : left (par defaut), center, right.
 * [ ] Shortcodes Bouton `{{< button "text" "liens">}}`
+* [X] Shortcode Bouton contact {{< buttoncontact >}} qui redirige vers le lien du formulaire défini dans `config.toml` `params.contact`
 
 #### HACF/McFlyPartages
 * [X] Shortcode lien Forum HACF. 
