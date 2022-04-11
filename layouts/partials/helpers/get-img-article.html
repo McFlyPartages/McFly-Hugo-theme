@@ -1,5 +1,5 @@
 
-{{ $imgPost := resources.Get "images/articles/background-dark.png"}}
+{{ $imgPost := resources.Get "images/articles/background-dark.png" }}
 {{ .Scratch.Set "heroScratch" $imgPost }}
 
 {{ $imgPost := .Scratch.Get "heroScratch" }}
