@@ -13,6 +13,7 @@ Basé sur Bootstrap 5 et Font Awesome
 ### Optimisation.
 * [ ] Organiser le theme.
 * [ ] Travailler sur les branch de Github.
+* [ ] Ajouter Favicon.
 * [X] Titre : Ancrage pour sommaire (https://gohugo.io/getting-started/configuration-markup)
 * [X] link : Render Hook Link https://gohugo.io/templates/render-hooks/
 * [ ] Code : Mise en forme via Render Hooks https://gohugo.io/templates/render-hooks/#render-hooks-for-code-blocks
