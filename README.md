@@ -5,7 +5,7 @@ Basé sur Bootstrap 5 et Font Awesome
 
 ### Gestion.
 * [X] Bootstrap local
-* [ ] Réduire le CSS Bootstrap ou le packager.
+* [X] Réduire le CSS Bootstrap ou le packager.
 https://romain.therrat.fr/posts/2020/04/hugo-supprimer-le-css-inutilise/ (FR)
 https://zwbetz.com/how-to-use-purgecss-with-hugo/ 
 https://gohugo.io/hugo-pipes/postprocess/ 
