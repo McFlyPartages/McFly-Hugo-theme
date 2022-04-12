@@ -1,10 +1,37 @@
+<!--<link rel="stylesheet" media="all" type="text/css" href="/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="all">
-<link rel="stylesheet" href="/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="/css/styles.css" type="text/css" media="all">
+<link rel="stylesheet" media="all" type="text/css" href="/css/fa-all.css">-->
 
-<script src="/js/bootstrap.min.js"></script>
-<!--<script src="https://kit.fontawesome.com/d5cd6bfed4.js" crossorigin="anonymous"></script>-->
+
+<!-- Suppresion des class inutilisées et minification-->
+<!-- bootstrap-->
+{{ $cssbootstrap := resources.Get "/css/bootstrap.min.css" | resources.PostCSS }}
+
+{{ if hugo.IsProduction }}
+    {{ $cssbootstrap = $cssbootstrap | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<link rel="stylesheet" href="{{ $cssbootstrap.RelPermalink }}" integrity="{{ $cssbootstrap.Data.Integrity }}" media="all" type="text/css">
+
+<!-- FontAwesome-->
+{{ $cssfontawesome := resources.Get "/css/fa-all.css" | resources.PostCSS }}
+
+{{ if hugo.IsProduction }}
+    {{ $cssfontawesome = $cssfontawesome | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<link rel="stylesheet" href="{{ $cssfontawesome.RelPermalink }}" integrity="{{ $cssfontawesome.Data.Integrity }}" media="all" type="text/css">
+
+<!-- Styles -->
+{{ $csscustomstyles := resources.Get "/css/styles.css" | resources.PostCSS }}
+
+{{ if hugo.IsProduction }}
+    {{ $csscustomstyles = $csscustomstyles | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<link rel="stylesheet" href="{{ $csscustomstyles.RelPermalink }}" integrity="{{ $csscustomstyles.Data.Integrity }}" media="all" type="text/css">
+
+
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+
 <!-- Matomo -->
 
 <!-- End Matomo Code -->

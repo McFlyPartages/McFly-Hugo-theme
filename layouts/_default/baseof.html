@@ -6,7 +6,11 @@
     <meta name="keywords" content="{{if .IsHome}}{{ $.Site.Params.keywords }}{{else}}{{ delimit .Keywords ", " }}{{end}}" />
     <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
     <meta name="author" content="{{ .Site.Author.name}}">
-    {{- partial "head.html" . -}}
+    <head>
+
+        {{- partial "head.html" . -}}
+    </head>
+
     <body>
         {{- partial "header.html" . -}}
         <div id="content">
