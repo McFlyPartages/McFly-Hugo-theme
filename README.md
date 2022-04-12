@@ -6,14 +6,15 @@ Basé sur Bootstrap 5 et Font Awesome
 ### Gestion.
 * [X] Bootstrap local
 * [ ] Réduire le CSS Bootstrap ou le packager.
-* [ ] Font Awesome local (via CDN pour le moment)
+* [X] Font Awesome local (A nettoyer)
 * [X] Workflow : Géneration, transfert vers FTP/SFTP.
 * [X] Multi Author (https://codingnconcepts.com/hugo/multiple-authors-hugo/)
 
 ### Optimisation.
 * [ ] Organiser le theme.
+* [ ] Nettoyer les fichiers FontAwesome en gardant le strict besoin.
 * [ ] Travailler sur les branch de Github.
-* [ ] Ajouter Favicon.
+* [X] Ajouter Favicon.
 * [X] Titre : Ancrage pour sommaire (https://gohugo.io/getting-started/configuration-markup)
 * [X] link : Render Hook Link https://gohugo.io/templates/render-hooks/
 * [ ] Code : Mise en forme via Render Hooks https://gohugo.io/templates/render-hooks/#render-hooks-for-code-blocks
@@ -47,8 +48,8 @@ Basé sur Bootstrap 5 et Font Awesome
 
 
 #### SEO
-* [ ] single : Ajout du Head personalisé en fonction de la page (description et mots clés)
-* [ ] single : Correction de l'affichage des keywords (suppression [] remplacé par une ", ")
+* [X] single : Ajout du Head personalisé en fonction de la page (description et mots clés)
+* [X] single : Correction de l'affichage des keywords (suppression [] remplacé par une ", ")
 
 
 #### Non urgent
@@ -63,7 +64,7 @@ Basé sur Bootstrap 5 et Font Awesome
 * [X] Images : Ajouter shortcodes Gallery + image processing `{{< gallery folder="infos" >}}` infos=le nom du dossier contenant les images
 * [X] single : Shortcode Alerte. `{{< alert "Message **d'alerte**" success >}}` options possibles : danger/sucess/warning/info.
 * [X] single : Shortcode de citation `{{< quote "Message **citation**" "artiste **anonyme**" "align" >}}` align : left (par defaut), center, right.
-* [ ] Shortcodes Bouton `{{< button "text" "liens">}}`
+* [X] Shortcodes Bouton `{{< button "text" "liens">}}`
 * [X] Shortcode Bouton contact {{< buttoncontact >}} qui redirige vers le lien du formulaire défini dans `config.toml` `params.contact`
 
 #### HACF/McFlyPartages
