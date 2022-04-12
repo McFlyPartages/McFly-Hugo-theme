@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{{ $cssfontawesome.RelPermalink }}" integrity="{{ $cssfontawesome.Data.Integrity }}" media="all" type="text/css">
 
 <!-- Styles -->
-{{ $csscustomstyles := resources.Get "/css/styles.css" | resources.PostCSS }}
+{{ $csscustomstyles := resources.Get "/css/customcss.css" | resources.PostCSS }}
 
 {{ if hugo.IsProduction }}
     {{ $csscustomstyles = $csscustomstyles | minify | fingerprint | resources.PostProcess }}
