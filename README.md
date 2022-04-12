@@ -13,7 +13,7 @@ https://www.tzeyiing.com/posts/adding-postcss-to-a-hugo-static-site/
 https://ricard.dev/how-to-add-purgecss-to-hugo/
 https://janaksingh.com/blog/hugo-css-concat-minify-purgecss-tutorial/
 https://romain.therrat.fr/posts/2020/04/hugo-supprimer-le-css-inutilise/
-
+* [ ] Réduire le JS avec Uglify
 * [X] Font Awesome local (A nettoyer)
 * [X] Workflow : Géneration, transfert vers FTP/SFTP.
 * [X] Multi Author (https://codingnconcepts.com/hugo/multiple-authors-hugo/)
