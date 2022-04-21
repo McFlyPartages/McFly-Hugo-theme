@@ -3,8 +3,8 @@
 <link rel="stylesheet" media="all" type="text/css" href="/css/fa-all.css">-->
 
 
-<!-- Suppresion des class inutilisées et minification-->
-<!-- bootstrap-->
+<!-- Suppresion des class inutilisées et minification
+bootstrap
 {{ $cssbootstrap := resources.Get "/css/bootstrap.min.css" | resources.PostCSS }}
 
 {{ if hugo.IsProduction }}
@@ -12,7 +12,7 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $cssbootstrap.RelPermalink }}" integrity="{{ $cssbootstrap.Data.Integrity }}" media="all" type="text/css">
 
-<!-- FontAwesome-->
+FontAwesome
 {{ $cssfontawesome := resources.Get "/css/fa-all.css" | resources.PostCSS }}
 
 {{ if hugo.IsProduction }}
@@ -20,7 +20,7 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $cssfontawesome.RelPermalink }}" integrity="{{ $cssfontawesome.Data.Integrity }}" media="all" type="text/css">
 
-<!-- Styles -->
+Styles
 {{ $csscustomstyles := resources.Get "/css/customcss.css" | resources.PostCSS }}
 
 {{ if hugo.IsProduction }}
@@ -28,7 +28,11 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $csscustomstyles.RelPermalink }}" integrity="{{ $csscustomstyles.Data.Integrity }}" media="all" type="text/css">
 
+-->
 
+<link rel="stylesheet" media="all" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" media="all" type="text/css" href="/css/fa-all.css">
+<link rel="stylesheet" media="all" type="text/css" href="/css/customcss.css">
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 
