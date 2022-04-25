@@ -25,6 +25,7 @@ https://romain.therrat.fr/posts/2020/04/hugo-supprimer-le-css-inutilise/
 * [ ] Organiser le theme.
 * [ ] Nettoyer les fichiers FontAwesome en gardant le strict besoin.
 * [ ] Travailler sur les branch de Github.
+* [X] Suppression du JS pour le Menu principal (https://www.viralpatel.net/bootstrap-navbar-menu-without-javascript/, https://freakspot.net/en/barra-de-navegacion-de-bootstrap-sin-javascript/)
 * [X] Ajouter Favicon.
 * [X] Titre : Ancrage pour sommaire (https://gohugo.io/getting-started/configuration-markup)
 * [X] link : Render Hook Link https://gohugo.io/templates/render-hooks/
