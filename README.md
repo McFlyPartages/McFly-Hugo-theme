@@ -1,4 +1,4 @@
-# McFly-theme
+# McFly-Hugo-theme
 Theme Hugo basé sur Bootstrap 5 et sur le respect des données
 
 Basé sur Bootstrap 5 et Font Awesome
