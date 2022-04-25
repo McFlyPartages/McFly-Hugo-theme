@@ -20,7 +20,7 @@
             <a class="nav-link dropdown-toggle text-black" href="#" id="{{ $id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ .Name }}
             </a>
-            <ul class="dropdown-menu bg-light" aria-labelledby="{{ $id }}">
+            <ul class="dropdown-menu bg-light text-center" aria-labelledby="{{ $id }}">
               {{ range .Children }}
               <li>
                 <a class="dropdown-item text-black" href="{{ .URL }}" {{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Name }}</a>
