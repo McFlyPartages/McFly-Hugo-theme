@@ -23,7 +23,7 @@
             <ul class="dropdown-menu bg-light text-center" aria-labelledby="{{ $id }}">
               {{ range .Children }}
               <li>
-                <a class="dropdown-item text-black" href="{{ .URL }}" {{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Name }}</a>
+                <a class="dropdown-item text-secondary" href="{{ .URL }}" {{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Name }}</a>
               </li>
               {{ end }}
             </ul>
