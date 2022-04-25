@@ -1,14 +1,14 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "HACF Hugo Theme"
+name = "McFly Hugo Theme"
 license = "MIT"
-licenselink = "https://github.com/McFlyPartages/mcfly-hugo-theme/blob/main/LICENSE"
-description = "Theme for Hugo based in Bootsrap 5 and Font Awesome"
+licenselink = "https://github.com/McFlyPartages/McFly-Hugo-theme/blob/main/LICENSE"
+description = "Theme for Hugo based in Bootsrap 5, Font Awesome and privaxy respect"
 homepage = "http://mcflypartages.fr/"
 tags = []
 features = []
-min_version = "0.92.0"
+min_version = "0.97.0"
 
 [author]
   name = "McFly"
