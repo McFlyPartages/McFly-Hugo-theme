@@ -1,5 +1,5 @@
-# hacf-theme
-Theme Hugo pour HACF.fr
+# McFly-theme
+Theme Hugo basé sur Bootstrap 5 et sur le respect des données
 
 Basé sur Bootstrap 5 et Font Awesome
 
